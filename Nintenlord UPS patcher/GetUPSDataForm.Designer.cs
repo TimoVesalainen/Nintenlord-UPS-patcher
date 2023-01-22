@@ -1,6 +1,6 @@
 ﻿namespace Nintenlord.UPSpatcher
 {
-    partial class Form3
+    partial class GetUPSDataForm
     {
         /// <summary>
         /// Required designer variable.

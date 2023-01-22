@@ -6,9 +6,9 @@ using Nintenlord.Hacking.Core;
 
 namespace Nintenlord.UPSpatcher
 {
-    public partial class Form3 : Form
+    public partial class GetUPSDataForm : Form
     {
-        public Form3()
+        public GetUPSDataForm()
         {
             InitializeComponent();
         }

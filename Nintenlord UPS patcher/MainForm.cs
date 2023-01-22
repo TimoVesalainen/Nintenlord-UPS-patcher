@@ -12,14 +12,14 @@ namespace Nintenlord.UPSpatcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form form = new Form1();
+            Form form = new PatchFileForm();
             form.ShowInTaskbar = false;
             form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form form = new Form2();
+            Form form = new CreateUPSForm();
             form.ShowInTaskbar = false;
             form.ShowDialog();
         }
@@ -31,7 +31,7 @@ namespace Nintenlord.UPSpatcher
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form form = new Form3();
+            Form form = new GetUPSDataForm();
             form.ShowInTaskbar = false;
             form.ShowDialog();
         }

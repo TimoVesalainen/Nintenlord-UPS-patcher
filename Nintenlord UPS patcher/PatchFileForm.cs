@@ -6,10 +6,10 @@ using Nintenlord.Hacking.Core;
 
 namespace Nintenlord.UPSpatcher
 {
-    public partial class Form1 : Form
+    public partial class PatchFileForm : Form
     {
 
-        public Form1()
+        public PatchFileForm()
         {
             InitializeComponent();
             this.Resize += new EventHandler(Form1_Resize);

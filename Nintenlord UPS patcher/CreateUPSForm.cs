@@ -6,9 +6,9 @@ using Nintenlord.Hacking.Core;
 
 namespace Nintenlord.UPSpatcher
 {
-    public partial class Form2 : Form
+    public partial class CreateUPSForm : Form
     {
-        public Form2()
+        public CreateUPSForm()
         {
             InitializeComponent();
             this.Resize += new EventHandler(Form2_Resize);
