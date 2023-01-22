@@ -127,6 +127,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(83, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(123, 20);
@@ -134,6 +136,8 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(83, 40);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(123, 20);
@@ -142,7 +146,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(212, 8);
+            this.button3.Location = new System.Drawing.Point(212, 9);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -153,7 +157,7 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(212, 37);
+            this.button5.Location = new System.Drawing.Point(212, 39);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 14;
@@ -189,7 +193,7 @@
             this.checkBox1.Text = "Create backup of the file (.bak)";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // PatchFileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +208,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "PatchFileForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Patch a file";
