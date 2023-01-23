@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
 using Nintenlord.Hacking.Core;
+using System.Threading.Tasks;
 
 namespace Nintenlord.UPSpatcher
 {
@@ -26,39 +27,44 @@ namespace Nintenlord.UPSpatcher
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
             if (!File.Exists(textBox1.Text))
             {
                 MessageBox.Show("Patch doesn't exist.");
                 return;
             }
-            UPSfile UPSFile = new UPSfile(textBox1.Text);
-            int[,] details = UPSFile.GetData();
-            UPSFile = null;
 
-            List<string> lines = new List<string>(details.Length + 1);
-            lines.Add(textBox2.Lines[0]);
-            string offsets = "Offsets ";
-            string lenghts = "Lenghts";
-            lines.Add(offsets);
-            int longestOffsetLenght = offsets.Length;
-            for (int i = 0; i < details.Length / 2; i++)
+            List<string> lines = new List<String>();
+            await Task.Run(() =>
             {
-                string line = Convert.ToString(details[i, 0], 16);
-                if (line.Length + 1 > longestOffsetLenght)
-                    longestOffsetLenght = line.Length + 1;
-                lines.Add(line);
-            }
+                UPSfile UPSFile = new UPSfile(textBox1.Text);
+                int[,] details = UPSFile.GetData();
+                UPSFile = null;
 
-            for (int i = 1; i < lines.Count; i++)
-                lines[i] += "\t";
-            lines[1] += lenghts;
-            for (int i = 2; i < lines.Count; i++)
-            {
-                lines[i] += Convert.ToString(details[i - 2, 1], 16);
-                lines[i] = lines[i].ToUpper();
-            }
+                lines.Capacity = details.Length + 1;
+                lines.Add(textBox2.Lines[0]);
+                string offsets = "Offsets ";
+                string lenghts = "Lenghts";
+                lines.Add(offsets);
+                int longestOffsetLenght = offsets.Length;
+                for (int i = 0; i < details.Length / 2; i++)
+                {
+                    string line = Convert.ToString(details[i, 0], 16);
+                    if (line.Length + 1 > longestOffsetLenght)
+                        longestOffsetLenght = line.Length + 1;
+                    lines.Add(line);
+                }
+
+                for (int i = 1; i < lines.Count; i++)
+                    lines[i] += "\t";
+                lines[1] += lenghts;
+                for (int i = 2; i < lines.Count; i++)
+                {
+                    lines[i] += Convert.ToString(details[i - 2, 1], 16);
+                    lines[i] = lines[i].ToUpper();
+                }
+            });
 
             textBox2.Lines = lines.ToArray();
         }
