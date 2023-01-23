@@ -44,7 +44,7 @@ namespace Nintenlord.UPSpatcher
 
                 lines.Capacity = details.Length + 1;
                 lines.Add(textBox2.Lines[0]);
-                string offsets = "Offsets ";
+                string offsets = "Offsets";
                 string lenghts = "Lenghts";
                 lines.Add(offsets);
                 int longestOffsetLenght = offsets.Length;
