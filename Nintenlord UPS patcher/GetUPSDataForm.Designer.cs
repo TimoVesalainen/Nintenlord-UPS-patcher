@@ -96,9 +96,11 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(141, 116);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "UPS Patch details:";
+            this.textBox2.WordWrap = false;
             // 
             // GetUPSDataForm
             // 
